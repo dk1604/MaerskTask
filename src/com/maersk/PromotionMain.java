@@ -9,7 +9,7 @@ import java.util.Locale;
 
 public class PromotionMain {
     public static void main(String[] args) throws IOException {
-        System.out.println("Promotion Started!!Enter your SKU ID using a single space");
+        System.out.println("Promotion Started!!\nEnter your SKU ID using a single space\ni.e.2a 3b");
         PromotionMain promotionMain = new PromotionMain();
         promotionMain.reaaConsole();
     }
@@ -20,7 +20,8 @@ public class PromotionMain {
         String name = reader.readLine();
         String[] temp = name.split(" ");
         for (String token : temp) {
-            switch (token.toUpperCase()) {
+            String skuId = !token.isEmpty() ? String.valueOf(token.charAt(1)) : "default";
+            switch (skuId.toUpperCase()) {
                 case SKUIDS.A:
                     skuIds.add(token);
                     break;

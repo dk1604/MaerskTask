@@ -11,4 +11,11 @@ public class SkuIdSPrice {
         ppu.put(SKUIDS.D, 15);
     }
 
+    public void promotionalOffers() {
+        HashMap<String, Integer> promoOffer = new HashMap<>();
+        promoOffer.put("3"+SKUIDS.A, 130);
+        promoOffer.put("2"+SKUIDS.B, 45);
+        promoOffer.put(SKUIDS.C+SKUIDS.D, 30);
+    }
+
 }
