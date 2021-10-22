@@ -7,6 +7,8 @@ public interface PromotionalInterface {
 
     Integer getPricePerUnit(String key);
 
+    List<Integer> getPromotionalOffer(String key);
+
     Map<String, List<Integer>> promotionalOfferA();
 
     Map<String, List<Integer>> promotionalOfferB();

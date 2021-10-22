@@ -2,7 +2,7 @@ package com.maersk;
 
 import java.util.*;
 
-public class SkuIdSPrice implements PromotionalInterface {
+public class PromotionalInterfaceImpl implements PromotionalInterface {
     private Map<String, Integer> pricePerUnit() {
         HashMap<String, Integer> ppu = new HashMap<>();
         ppu.put(SKUIDS.A, 50);
@@ -14,14 +14,14 @@ public class SkuIdSPrice implements PromotionalInterface {
     }
     @Override
     public Integer getPricePerUnit(String key){
-        SkuIdSPrice skuIdSPrice = new SkuIdSPrice();
+        PromotionalInterfaceImpl skuIdSPrice = new PromotionalInterfaceImpl();
         return skuIdSPrice.pricePerUnit().get(key);
     }
 
     public List<Integer> getPromotionalOffer(String key) {
         System.out.println("getPromotional offer key:: "+key);
         List<Integer> value;
-        SkuIdSPrice skuIdSPrice = new SkuIdSPrice();
+        PromotionalInterfaceImpl skuIdSPrice = new PromotionalInterfaceImpl();
         switch (key){
             case SKUIDS.A:
                 value = skuIdSPrice.promotionalOfferA().get(key);
@@ -50,12 +50,12 @@ public class SkuIdSPrice implements PromotionalInterface {
         //offer 1 for A
         valSetOne.add(1);
         valSetOne.add(50);
-        //
+        //offer 2 for A
         valSetOne.add(3);
         valSetOne.add(130);
-        //offer 2 for A
+        //offer 3 for A
         valSetOne.add(6);
-        valSetOne.add(100);
+        valSetOne.add(200);
 
         Map<String, List<Integer>> promoOffer = new HashMap<>();
         promoOffer.put(SKUIDS.A, valSetOne);

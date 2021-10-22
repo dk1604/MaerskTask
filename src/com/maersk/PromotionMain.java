@@ -7,12 +7,12 @@ public class PromotionMain {
     public static void main(String[] args) throws IOException {
         System.out.println("Promotion Started!!\nEnter your SKU ID using a single space\ni.e.2a 3b");
 
-        Util util = new Util();
-        Map<String, Integer> listOfSkuIds = util.reaaConsole();
+        ConsoleReader reader = new ConsoleReader();
+        Map<String, Integer> listOfSkuIds = reader.reaaConsole();
 
-        PromotionEngine promotionEngine = new PromotionEngine();
+        PromotionalOfferCalculator promotionEngine = new PromotionalOfferCalculator();
         Integer cartTotal = promotionEngine.calculateCartValue(listOfSkuIds);
-        System.out.println("final cart value: " + cartTotal);
+        System.out.println("Final cart value: " + cartTotal);
     }
 
 
