@@ -14,6 +14,7 @@ public class Util {
         String[] temp = name.split(" ");
         for (String token : temp) {
             int itemCount = (token.length() == 1) ? 1 : Integer.parseInt(String.valueOf(token.charAt(0)));
+            System.out.println("itemcount " + itemCount + " token " + token);
             String skuId = (token.length() == 1) ? String.valueOf(token.charAt(0)) :
                     !token.isEmpty() ? String.valueOf(token.charAt(1)) : "default";
 

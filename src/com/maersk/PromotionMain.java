@@ -1,11 +1,6 @@
 package com.maersk;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class PromotionMain {
@@ -19,8 +14,6 @@ public class PromotionMain {
         Integer cartTotal = promotionEngine.calculateCartValue(listOfSkuIds);
         System.out.println("final cart value: " + cartTotal);
     }
-
-
 
 
 }
